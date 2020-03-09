@@ -1,21 +1,24 @@
-import styled, { createGlobalStyle } from 'styled-components'
-import { backgroundColor, fontColor } from './config'
+import styled from 'styled-components'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby'
+import { dark, light } from './config'
 
-export const GlobalStyle = createGlobalStyle`
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-body{
- height: 100vh;
- overflow-x: hidden;
- font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- background: ${backgroundColor};
- font-size: 16px;
- color: ${fontColor};
-}
+export const Image = styled(Img)`
+	width: 100%;
+	@media screen and (min-width: 600px) {
+		width: 40vw;
+	}
 `
-export const IndexWrapper = styled.main``
-
-export const PostWrapper = styled.div``
+export const ImageBanner = styled(Img)`
+	width: 100%;
+	float: right;
+	@media screen and (min-width: 600px) {
+		width: 40vw;
+	}
+`
+export const StyledLinkLogo = styled(Link)`
+	color: ${props =>
+		props.theme.isDark ? dark.primaryColor : light.primaryColor};
+	font-weight: 400;
+	text-decoration: none;
+`

@@ -1,15 +1,18 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { StyledH1 } from './styles'
+import React, { useContext, useState, useEffect } from 'react'
+import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode'
+import { Navbar } from '../Navbar'
 
 export const Header = ({ siteTitle, siteDescription }) => {
+	const themeContext = useContext(ThemeManagerContext)
+	const [dark, setDark] = useState(false)
+
+	useEffect(() => {
+		setDark(!themeContext.isDark)
+	}, [dark])
+
 	return (
 		<>
-			<Link to="/">
-				<StyledH1>{siteTitle}</StyledH1>
-				<p>{siteDescription}</p>
-			</Link>
-			<button>Change mode</button>
+			<Navbar themeContext={themeContext} dark={dark} setDark={setDark} />
 		</>
 	)
 }

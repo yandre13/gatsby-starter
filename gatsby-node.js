@@ -1,48 +1,55 @@
 const { createFilePath } = require('gatsby-source-filesystem'),
 	path = require('path')
 
-exports.createPages = ({ actions, graphql }) => {
-	const { createPage } = actions,
-		blogPostTemplate = path.resolve('src/templates/blogPostTemplate.js')
-	return graphql(`
+exports.createPages = async ({ actions, graphql }) => {
+	const { createPage } = actions, //Creates pages
+		blogPostTemplate = path.resolve('src/templates/blogPostTemplate.js') //template
+	//query gql
+	const result = await graphql(`
 		{
 			allMdx {
-				nodes {
-					fields {
-						slug
-					}
-					frontmatter {
-						title
+				edges {
+					node {
+						frontmatter {
+							title
+						}
+						fields {
+							slug
+						}
 					}
 				}
 			}
 		}
-	`).then(result => {
-		if (result.errors) throw result.errors
-		const posts = result.data.allMdx.nodes
-		//create page for each mdx file
-		posts.forEach((post, idx) => {
-			const previous = idx === post.length - 1 ? null : posts[idx + 1],
-				next = idx === 0 ? null : posts[idx - 1]
-			createPage({
-				path: post.fields.slug,
-				component: blogPostTemplate,
-				context: {
-					slug: post.fields.slug,
-					previous,
-					next
-				}
-			})
+	`)
+	if (result.errors) throw result.errors
+	//getting posts
+	const posts = result.data.allMdx.edges.map(({ node }) => node)
+	//create page for each mdx file
+	posts.forEach((post, idx) => {
+		//console.log(post)
+		const previous = idx === post.length - 1 ? null : posts[idx + 1],
+			next = idx === 0 ? null : posts[idx - 1]
+		//
+		createPage({
+			path: post.fields.slug,
+			component: blogPostTemplate, //Template
+			//Data passed to context is available in page queries as Gql variables
+			context: {
+				slug: post.fields.slug,
+				previous,
+				next
+			}
 		})
 	})
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-	const { createNodeField } = actions
+	const { createNodeField } = actions //Creates a node
 	if (node.internal.type === 'Mdx') {
-		const value = createFilePath({ node, getNode })
+		const value = createFilePath({ node, getNode }) //Creates a file path (slug)
+		//Creates (a field: fields in Gql), aditionals fields in these nodes(So adding a name and value)
 		createNodeField({
-			name: 'slug',
+			name: `slug`,
 			node,
 			value
 		})

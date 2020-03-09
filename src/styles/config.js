@@ -1,71 +1,34 @@
-import theme from 'styled-theming'
+import { createGlobalStyle } from 'styled-components'
 
-export const lightMode = {
+export const GlobalStyle = createGlobalStyle`
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{
+ height: 100vh;
+ overflow-x: hidden;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ color: ${props =>
+		props.theme.isDark ? dark.primaryColor : light.primaryColor};
+  background: ${props => (props.theme.isDark ? '#262626' : '#ffffff')};
+  transition: background-color .7s ease;
+}
+`
+
+export const dark = {
+	backgroundColor: '#333',
+	primaryColor: '#f2f2f2',
+	secondaryColor: '#F063B8',
+	fontColor: '#4B5D68',
+	buttonColor: '#9C69E2'
+}
+
+export const light = {
 	backgroundColor: '#F1F2F5',
-	fontColor: '#545e6f',
-	backgroundCardColor: '#fff',
-	primaryColor: '#451771',
-	secondaryColor: '#CE1F99',
-	tertiaryColor: '#ff5733',
-	selectedColor: '#24b373',
-	success: '#545e6f',
-	warning: '#f6c95b',
-	danger: '#545e6f'
-}
-
-export const darkMode = {
-	backgroundColor: '#000',
-	fontColor: '#545e6f',
-	backgroundCardColor: '#fff',
-	primaryColor: '#451771',
-	secondaryColor: '#CE1F99',
-	tertiaryColor: '#ff5733',
-	selectedColor: '#24b373',
-	success: '#545e6f',
-	warning: '#f6c95b',
-	danger: '#545e6f'
-}
-
-const backgroundColor = theme('mode', {
-		dark: `${darkMode.backgroundColor}`,
-		light: `${lightMode.backgroundColor}`
-	}),
-	fontColor = theme('mode', {
-		dark: `${darkMode.fontColor}`,
-		light: `${lightMode.fontColor}`
-	}),
-	backgroundCardColor = theme('mode', {
-		dark: `${darkMode.backgroundCardColor}`,
-		light: `${lightMode.backgroundCardColor}`
-	}),
-	primaryColor = theme('mode', {
-		dark: `${darkMode.primaryColor}`,
-		light: `${lightMode.primaryColor}`
-	}),
-	secondaryColor = theme('mode', {
-		dark: `${darkMode.secondaryColor}`,
-		light: `${lightMode.secondaryColor}`
-	}),
-	selectedColor = theme('mode', {
-		dark: `${darkMode.selectedColor}`,
-		light: `${lightMode.selectedColor}`
-	}),
-	warning = theme('mode', {
-		dark: `${darkMode.warning}`,
-		light: `${lightMode.warning}`
-	}),
-	tertiaryColor = theme('mode', {
-		dark: `${darkMode.tertiaryColor}`,
-		light: `${lightMode.tertiaryColor}`
-	})
-
-export {
-	backgroundColor,
-	fontColor,
-	backgroundCardColor,
-	primaryColor,
-	secondaryColor,
-	tertiaryColor,
-	selectedColor,
-	warning
+	primaryColor: '#212353',
+	secondaryColor: '#F063B8',
+	fontColor: '#4B5D68',
+	buttonColor: '#9C69E2'
 }

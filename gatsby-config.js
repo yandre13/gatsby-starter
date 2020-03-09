@@ -12,6 +12,7 @@ module.exports = {
 	siteMetadata,
 	plugins: [
 		`gatsby-plugin-styled-components`,
+		`gatsby-styled-components-dark-mode`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{
@@ -39,6 +40,10 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: { path: `${__dirname}/posts`, name: `posts` }
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: { path: `${__dirname}/src/images/`, name: `images` }
 		}
 	]
 }
