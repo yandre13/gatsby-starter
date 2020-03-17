@@ -129,7 +129,7 @@ export const Slider = () => {
 				>
 					Testimonials
 				</Text>
-				<Swiper getSwiper={setSwiper} {...params}>
+				<Swiper speed={1000} getSwiper={setSwiper} {...params}>
 					<Slide>
 						<CustomRow>
 							<CustomCol nspan={3}>
