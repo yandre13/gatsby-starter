@@ -1,31 +1,32 @@
 import React from 'react'
 //
 import { Layout } from '../components/Layout'
-import { graphql, Link } from 'gatsby'
-import { ImageBanner, Image, StyledLinkLogo } from '../styles'
+import { graphql } from 'gatsby'
+import { OverContainer } from '../styles'
+
+import { Slider } from '../components/Swiper'
+
+import Section01 from '../content/Section01'
+import Section02 from '../content/Section02'
+import Section03 from '../content/Section03'
+import Section04 from '../content/Section04'
 
 export default ({ data }) => {
 	return (
 		<>
 			<Layout>
-				<div>
-					<h1 style={{ fontSize: '50px', width: '50%', padding: '20px' }}>
-						Save your data storage here
-					</h1>
-					<ImageBanner fluid={data.image.childImageSharp.fluid} />
-					{data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
-						<div key={id}>
-							<StyledLinkLogo to={fields.slug}>
-								{!!frontmatter.cover ? (
-									<Image fluid={frontmatter.cover.childImageSharp.fluid} />
-								) : null}
-								<h1>{frontmatter.title}</h1>
-								<p>{frontmatter.date}</p>
-								<p>{excerpt}</p>
-							</StyledLinkLogo>
-						</div>
-					))}
-				</div>
+				{/*Section 1*/}
+				<Section01 data={data} />
+				<OverContainer>
+					{/*Section 2*/}
+					<Section02 data={data} />
+					{/*Section 3*/}
+					<Section03 />
+					{/*Section 4*/}
+					<Section04 data={data} />
+					{/*Section 5*/}
+					<Slider />
+				</OverContainer>
 			</Layout>
 		</>
 	)
@@ -57,7 +58,42 @@ export const query = graphql`
 				}
 			}
 		}
-		image: file(relativePath: { eq: "banner.png" }) {
+		banner: file(relativePath: { eq: "banner.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 1000) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		img2: file(relativePath: { eq: "img2.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 1000) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		img_c01: file(relativePath: { eq: "img_c01.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 1000) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		img_c02: file(relativePath: { eq: "img_c02.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 1000) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		img_c03: file(relativePath: { eq: "img_c03.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 1000) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		img_c04: file(relativePath: { eq: "img_c04.png" }) {
 			childImageSharp {
 				fluid(maxWidth: 1000) {
 					...GatsbyImageSharpFluid

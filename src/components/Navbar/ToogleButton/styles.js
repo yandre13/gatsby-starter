@@ -1,11 +1,13 @@
 import styled, { css } from 'styled-components'
+import { dark, light } from '../../../styles/config'
 
 //Button
 
 export const Stripe = styled.div`
 	width: 100%;
 	height: 1px;
-	background: #fff;
+	background: ${props =>
+		props.theme.isDark ? dark.primaryColor : light.primaryColor};
 	margin: 5px auto;
 	transition: all 0.3s;
 	backface-visibility: hidden;

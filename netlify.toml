@@ -1,0 +1,5 @@
+# example netlify
+[build]
+#functions
+publish = "public"
+

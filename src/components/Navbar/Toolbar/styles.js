@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components'
+import { Toggle } from 'react-toggle-component'
+import { light } from '../../../styles/config'
 
 export const ContainerButton = styled.div`
 	display: flex;
@@ -19,14 +21,16 @@ export const Header = styled.header`
 	width: 100%;
 	/* background */
 	transition: 0.4s ease-in;
-	background: ${props => props.theme.primaryColor};
-	${props =>
+	background: ${props =>
+		props.theme.isDark ? '#262626' : light.backgroundColor};
+ ${props =>
 		props.transparent > props.innerMiddleHeight &&
 		css`
-			background: transparent;
+			background: ${props => (props.theme.isDark ? 'transparent' : 'transparent')};
 			backdrop-filter: saturate(180%) blur(25px);
 			border: 0;
 		`}
+
 /* 	${props =>
 	props.transparent > props.innerHeight &&
 	css`
@@ -35,7 +39,7 @@ export const Header = styled.header`
 	`} */
 top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 210;
  @media screen and (max-width: 768px) {
 		height: 56px;
 	}
@@ -49,11 +53,6 @@ export const Nav = styled.nav`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	@media (max-width: 768px) {
-		& {
-			flex-direction: ${props => (props.right ? 'row-reverse' : 'row')};
-		}
-	}
 `
 //A logo in a div
 export const Logo = styled.div`
@@ -61,32 +60,42 @@ export const Logo = styled.div`
 	display: flex;
 	align-items: center;
 	align-self: flex-start;
-	& a {
-		text-decoration: none;
-		font-size: 1.5rem;
-		line-height: 1.5;
-	}
 	& img {
 		width: 120px;
 		display: block;
 		padding: 10px;
 	}
 `
-//A div for the items
-export const Items = styled.div`
-	width: 100%;
-	& ul {
-		list-style: none;
-		display: flex;
-		justify-content: ${props => (props.right ? 'flex-end' : 'flex-end')};
-	}
-	& li {
-		padding: 0 0.5rem;
-	}
 
-	@media (max-width: 768px) {
-		& {
+export const StyledToggle = styled(Toggle)`
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 0px;
+	background-color: transparent;
+	background: ${props =>
+		props.dark ? `url('./moon_icon.svg')` : `url('./sun_icon.svg')`};
+	background-size: cover;
+	transition: all ease-in 0.7s;
+	& input[type='checkbox'] {
+		position: relative;
+		margin: 0;
+	}
+	& input[type='checkbox'] + label {
+		background: transparent;
+		width: 28px;
+		display: inline-block;
+		position: relative;
+		top: -20px;
+		&::before {
 			display: none;
 		}
+		&::after {
+			display: none;
+		}
+	}
+	& input[type='checkbox']:checked + label {
+		background: transparent;
 	}
 `

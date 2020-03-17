@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import { Header, Nav, Logo, Items, ContainerButton } from './styles'
+import { Header, Nav, Logo, ContainerButton, StyledToggle } from './styles'
 import { ToggleButton } from '../ToogleButton'
-import { Container } from '../../Container'
+import { Container } from '../../Container/styles.js'
 import { Links } from '../../Links'
 import { StyledLinkLogo } from '../../../styles'
 
@@ -10,7 +10,6 @@ export const Toolbar = ({
 	show,
 	setShow,
 	width,
-	right,
 	dark,
 	setDark,
 	themeContext
@@ -27,7 +26,7 @@ export const Toolbar = ({
 		return () => {
 			window.removeEventListener('scroll', () => setTransparent(window.scrollY))
 		}
-	}, [transparent])
+	}, [])
 
 	useEffect(() => {
 		if (typeof window !== `undefined`) {
@@ -42,9 +41,8 @@ export const Toolbar = ({
 			innerHeight={innerHeight}
 			innerMiddleHeight={innerMiddleHeight}
 		>
-			{console.log(innerMiddleHeight)}
 			<Container>
-				<Nav right={right}>
+				<Nav>
 					{width < 768 && (
 						<ContainerButton>
 							<ToggleButton show={show} setShow={setShow} />
@@ -57,13 +55,15 @@ export const Toolbar = ({
 						</StyledLinkLogo>
 					</Logo>
 
-					{width > 768 && (
-						<Items right={right}>
-							<ul>
-								<Links themeContext={themeContext} dark={dark} setDark={setDark} />
-							</ul>
-						</Items>
-					)}
+					{width > 768 && <Links />}
+					<StyledToggle
+						dark={dark}
+						name="toggle-switch"
+						onToggle={() => {
+							setDark(themeContext.isDark)
+							themeContext.toggleDark()
+						}}
+					/>
 				</Nav>
 			</Container>
 		</Header>

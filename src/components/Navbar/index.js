@@ -5,8 +5,7 @@ import { BackDrop } from './BackDrop'
 
 export const Navbar = ({ themeContext, dark, setDark }) => {
 	const [show, setShow] = useState(false),
-		[width, setWidth] = useState(0),
-		right = false
+		[width, setWidth] = useState(0)
 
 	const handleShow = () => setShow(!show)
 
@@ -22,7 +21,7 @@ export const Navbar = ({ themeContext, dark, setDark }) => {
 		return () => {
 			window.removeEventListener('resize', () => setWidth(window.innerWidth))
 		}
-	}, [width])
+	}, [])
 
 	return (
 		<>
@@ -30,12 +29,11 @@ export const Navbar = ({ themeContext, dark, setDark }) => {
 				width={width}
 				show={show}
 				setShow={handleShow}
-				right={right}
 				themeContext={themeContext}
 				dark={dark}
 				setDark={setDark}
 			/>
-			{width < 768 && <SideDrawer show={show} right={right} />}
+			{width < 768 && <SideDrawer show={show} />}
 			{show && width < 768 && <BackDrop setShow={handleShow} />}
 		</>
 	)

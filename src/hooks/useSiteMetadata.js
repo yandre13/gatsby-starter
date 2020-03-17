@@ -12,7 +12,7 @@ export const useSiteMetadata = () => {
 						siteUrl
 						siteLanguage
 						siteLocale
-						authorName
+						author
 					}
 				}
 			}

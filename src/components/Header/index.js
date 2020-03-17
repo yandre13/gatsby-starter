@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react'
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode'
 import { Navbar } from '../Navbar'
 
-export const Header = ({ siteTitle, siteDescription }) => {
+export const Header = () => {
 	const themeContext = useContext(ThemeManagerContext)
 	const [dark, setDark] = useState(false)
 

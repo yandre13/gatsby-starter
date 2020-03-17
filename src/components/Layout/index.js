@@ -1,34 +1,33 @@
 import React from 'react'
-import SEO from 'react-seo-component'
+import SEO from '../SEO'
 import { Header } from '../Header'
 import { useSiteMetadata } from '../../hooks/useSiteMetadata'
 import { GlobalStyle } from '../../styles/config'
-import { Container } from '../Container'
+import { Container } from '../Container/styles.js'
 import { StyledMain } from './styles'
 
-export const Layout = ({ titlePage, children }) => {
+export const Layout = ({ children }) => {
 	const {
-		description,
 		title,
-		image,
-		siteUrl,
+		description,
+		author,
 		siteLanguage,
-		siteLocale
+		siteUrl,
+		image
 	} = useSiteMetadata()
 
 	return (
 		<>
 			<SEO
-				titleTemplate={title}
-				title={titlePage || title}
-				description={description || 'Blog amazing'}
-				image={`${siteUrl}/${image}` || ''}
-				pathname={siteUrl || ''}
-				siteLanguage={siteLanguage || 'en'}
-				siteLocale={siteLocale || 'en'}
+				title={title}
+				description={description}
+				author={author}
+				lang={siteLanguage}
+				siteUrl={siteUrl}
+				image={image}
 			/>
 			<GlobalStyle />
-			<Header siteTitle={title} siteDescription={description} />
+			<Header />
 			<StyledMain>
 				<Container>{children}</Container>
 			</StyledMain>
