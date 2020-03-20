@@ -36,6 +36,7 @@
 		"react-id-swiper": "^3.0.0",
 		"react-live": "^2.2.2",
 		"react-toggle-component": "^3.0.8",
+		"smooth-scroll": "^16.1.2",
 		"styled-components": "^5.0.1",
 		"styled-icons": "^10.2.1",
 		"swiper": "^5.3.6"

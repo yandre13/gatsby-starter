@@ -18,23 +18,23 @@ const StyledArrow = styled(ArrowNarrowRight)`
 `
 
 export default ({ data }) => (
-	<CustomRow pt={60} mpt={20} pb={110} mpb={50} gutter={50}>
+	<CustomRow mp={'20px 0 50px 0'} p={'60px 0 110px'} gutter={50}>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={'#F0FAF8'}>
-					<ContainerImgContent pt={40} mpt={30}>
+				<Card bg={{ light: '#F0FAF8', dark: '#283230' }}>
+					<ContainerImgContent mp={'30px 0 0 0'} p={'40px 0 0 0'}>
 						<ImageBanner fluid={data.img_c01.childImageSharp.fluid} />
 					</ContainerImgContent>
-					<ContainerContent>
-						<Text type={{ tag: 'h4' }} pt={10} mpt={20}>
+					<ContainerContent p={'40px 40px 20px 20px'}>
+						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>
 							Features
 						</Text>
-						<Text type={{ tag: 'p' }} pt={30} pb={40} mpt={20} mpb={20}>
+						<Text type={{ tag: 'p' }} mp={'20px 0'} p={'30px 0 40px'}>
 							Don’t worry if your data is very large, the Data Warehoue provides a
 							search engine, which is useful for making it easier to find data
 							effectively saving time.
 						</Text>
-						<Text type={{ tag: 'p' }} weight={'bold'} mpb={20}>
+						<Text type={{ tag: 'p' }} weight={'bold'} mp={'0 0 20px 0'}>
 							Learn more <StyledArrow />
 						</Text>
 					</ContainerContent>
@@ -43,20 +43,20 @@ export default ({ data }) => (
 		</CustomCol>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={'#f5f0fc'}>
-					<ContainerImgContent pt={40} mpt={30}>
+				<Card bg={{ light: '#f5f0fc', dark: '#2B262C' }}>
+					<ContainerImgContent mp={'30px 0 0 0'} p={'40px 0 0 0'}>
 						<ImageBanner fluid={data.img_c02.childImageSharp.fluid} />
 					</ContainerImgContent>
-					<ContainerContent>
-						<Text type={{ tag: 'h4' }} pt={10} mpt={20}>
+					<ContainerContent p={'40px 40px 20px 20px'}>
+						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>
 							Features
 						</Text>
-						<Text type={{ tag: 'p' }} pt={30} pb={40} mpt={20} mpb={20}>
+						<Text type={{ tag: 'p' }} mp={'20px 0'} p={'30px 0 40px'}>
 							Don’t worry if your data is very large, the Data Warehoue provides a
 							search engine, which is useful for making it easier to find data
 							effectively saving time.
 						</Text>
-						<Text type={{ tag: 'p' }} weight={'bold'} mpb={20}>
+						<Text type={{ tag: 'p' }} weight={'bold'} mp={'0 0 20px 0'}>
 							Learn more <StyledArrow />
 						</Text>
 					</ContainerContent>
@@ -65,20 +65,20 @@ export default ({ data }) => (
 		</CustomCol>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={'#FDEFF8'}>
-					<ContainerImgContent pt={40} mpt={30}>
+				<Card bg={{ light: '#FDEFF8', dark: '#362830' }}>
+					<ContainerImgContent mp={'30px 0 0 0 '} p={'40px 0 0 0'}>
 						<ImageBanner fluid={data.img_c03.childImageSharp.fluid} />
 					</ContainerImgContent>
-					<ContainerContent>
-						<Text type={{ tag: 'h4' }} pt={10} mpt={20}>
+					<ContainerContent p={'40px 40px 20px 20px'}>
+						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>
 							Features
 						</Text>
-						<Text type={{ tag: 'p' }} pt={30} pb={40} mpt={20} mpb={20}>
+						<Text type={{ tag: 'p' }} mp={'20px 0'} p={'30px 0 40px'}>
 							Don’t worry if your data is very large, the Data Warehoue provides a
 							search engine, which is useful for making it easier to find data
 							effectively saving time.
 						</Text>
-						<Text type={{ tag: 'p' }} weight={'bold'} mpb={20}>
+						<Text type={{ tag: 'p' }} weight={'bold'} mp={'0 0 20px 0'}>
 							Learn more <StyledArrow />
 						</Text>
 					</ContainerContent>
@@ -87,20 +87,20 @@ export default ({ data }) => (
 		</CustomCol>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={'#EAF5FB'}>
-					<ContainerImgContent pt={40} mpt={30}>
+				<Card bg={{ light: '#EAF5FB', dark: '#222D34' }}>
+					<ContainerImgContent mp={'30px 0 0 0 '} p={'40px 0 0 0'}>
 						<ImageBanner fluid={data.img_c04.childImageSharp.fluid} />
 					</ContainerImgContent>
-					<ContainerContent>
-						<Text type={{ tag: 'h4' }} pt={10} mpt={20}>
+					<ContainerContent p={'40px 40px 20px 20px'}>
+						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>
 							Features
 						</Text>
-						<Text type={{ tag: 'p' }} pt={30} pb={40} mpt={20} mpb={20}>
+						<Text type={{ tag: 'p' }} mp={'20px 0'} p={'30px 0 40px'}>
 							Don’t worry if your data is very large, the Data Warehoue provides a
 							search engine, which is useful for making it easier to find data
 							effectively saving time.
 						</Text>
-						<Text type={{ tag: 'p' }} weight={'bold'} mpb={20}>
+						<Text type={{ tag: 'p' }} weight={'bold'} mp={'0 0 20px 0'}>
 							Learn more <StyledArrow />
 						</Text>
 					</ContainerContent>

@@ -1,8 +1,8 @@
 const siteMetadata = {
-	title: `My first blog with gatsby`,
-	description: `This is my coding blog where I write about my coding journey.`,
+	title: `Starter styled components`,
+	description: `Made with 🖤 for a better web`,
 	image: `/image.jpeg`,
-	siteUrl: `https://mygatsbyblog-ya.netlify.com/`,
+	siteUrl: `https://starter-landing-styled.netlify.com/`,
 	siteLanguage: `en`,
 	siteLocale: `en`,
 	author: `@yandre`

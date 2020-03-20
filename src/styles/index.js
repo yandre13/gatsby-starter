@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import { dark, light } from './config'
@@ -84,7 +84,16 @@ export const StyledLinkLogo = styled(Link)`
 `
 
 export const Button = styled(Link)`
-	background: #9c69e2;
+	${props =>
+		props.buttontype
+			? css`
+					background: ${props =>
+						props.theme.isDark ? dark.secondaryColor : light.secondaryColor};
+			  `
+			: css`
+					background: ${props =>
+						props.theme.isDark ? dark.buttonColor : light.buttonColor};
+			  `};
 	color: white;
 	display: block;
 	width: 166px;
@@ -93,10 +102,10 @@ export const Button = styled(Link)`
 	border: none;
 	border-radius: 25px;
 	padding: 12px 24px;
-	margin: ${props => (props.mac ? `0 auto` : '')};
+	margin: ${props => props.mm && props.mm};
 
 	@media screen and (min-width: 768px) {
-		margin: ${props => (props.ma ? `0 auto` : '0')};
+		margin: ${props => props.m && props.m};
 	}
 `
 export const OverContainer = styled.div`
@@ -111,7 +120,7 @@ export const OverContainer = styled.div`
 export const SquareOne = styled.div`
 	width: 100%;
 	border-radius: 50px;
-	background: #fde8f4;
+	background: ${props => (props.theme.isDark ? '#402B38' : '#fde8f4')};
 	padding: 40px 30px;
 	@media screen and (min-width: 768px) {
 		padding: 40px 60px 40px 40px;
@@ -144,12 +153,12 @@ export const ContainerImgContent = styled.div`
 	min-width: 180px;
 	min-height: 180px;
 	margin: auto;
-	padding-bottom: ${props => props.pb && `${props.pb}px`};
-	padding-top: ${props => props.pt && `${props.pt}px`};
+	padding: ${props => props.mp && props.mp};
 
 	@media screen and (min-width: 768px) {
 		min-width: 230px;
 		min-height: 230px;
+		padding: ${props => props.p && props.p};
 	}
 	@media screen and (min-width: 1200px) {
 		min-width: 240px;
@@ -175,20 +184,19 @@ export const ContainerContent = styled.div`
 	width: 100%;
 	margin: auto;
 	padding: 20px 30px;
-	padding-bottom: ${props => props.pb && `${props.pb}px`};
-	padding-top: ${props => props.pt && `${props.pt}px`};
+	padding: ${props => props.mp && props.mp};
 
 	@media screen and (min-width: 1370px) {
 		width: 80%;
 		margin: 0;
 		margin-left: auto;
-		padding: 40px 40px 20px 20px;
+		padding: ${props => props.p && props.p};
 	}
 `
 
 export const Card = styled.div`
 	position: relative;
-	background: ${props => props.bg};
+	background: ${props => (props.theme.isDark ? props.bg.dark : props.bg.light)};
 	width: 100%;
 	border-radius: 50px;
 	/*clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%); green #dcf5f0*/
@@ -254,7 +262,7 @@ export const SquareTwo = styled.section`
 	}
 	/*Bullets */
 	& .swiper-pagination-bullet {
-		background-color: white;
+		background-color: ${props => (props.theme.isDark ? '#302734' : '#fff')};
 		opacity: 0.7;
 	}
 	& .swiper-pagination-bullet-active {
@@ -269,5 +277,18 @@ export const SquareTwo = styled.section`
 	}
 	@media screen and (min-width: 768px) {
 		padding: 40px 60px;
+	}
+`
+
+export const Separator = styled.div`
+	width: 100%;
+	height: 1px;
+	background: ${props => (props.theme.isDark ? '#352C38' : '#EBE1F9')};
+	margin-bottom: ${props => props.mmb && `${props.mmb}px`};
+	margin-top: ${props => props.mmt && `${props.mmt}px`};
+
+	@media screen and (min-width: 768px) {
+		margin-bottom: ${props => props.mb && `${props.mb}px`};
+		margin-top: ${props => props.mt && `${props.mt}px`};
 	}
 `

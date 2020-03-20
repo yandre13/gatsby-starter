@@ -6,6 +6,11 @@ import { GlobalStyle } from '../../styles/config'
 import { Container } from '../Container/styles.js'
 import { StyledMain } from './styles'
 
+if (typeof window !== 'undefined') {
+	// eslint-disable-next-line global-require
+	require('smooth-scroll')('a[href*="#"]')
+}
+
 export const Layout = ({ children }) => {
 	const {
 		title,

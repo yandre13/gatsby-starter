@@ -2,13 +2,13 @@ import React from 'react'
 import { H1, H2, H3, H4, H5, P, Small } from './styles'
 
 export const Text = ({
+	id,
 	type,
 	align,
+	ma,
 	weight,
-	pb,
-	pt,
-	mpb,
-	mpt,
+	p,
+	mp,
 	color,
 	children
 }) => {
@@ -16,11 +16,11 @@ export const Text = ({
 		<>
 			{type.tag === 'h1' && (
 				<H1
+					id={id}
 					align={align}
-					pb={pb}
-					pt={pt}
-					mpb={mpb}
-					mpt={mpt}
+					ma={ma}
+					p={p}
+					mp={mp}
 					weight={weight}
 					color={color}
 				>
@@ -29,11 +29,11 @@ export const Text = ({
 			)}
 			{type.tag === 'h2' && (
 				<H2
+					id={id}
 					align={align}
-					pb={pb}
-					pt={pt}
-					mpb={mpb}
-					mpt={mpt}
+					ma={ma}
+					p={p}
+					mp={mp}
 					weight={weight}
 					color={color}
 				>
@@ -42,11 +42,11 @@ export const Text = ({
 			)}
 			{type.tag === 'h3' && (
 				<H3
+					id={id}
 					align={align}
-					pb={pb}
-					pt={pt}
-					mpb={mpb}
-					mpt={mpt}
+					ma={ma}
+					p={p}
+					mp={mp}
 					weight={weight}
 					color={color}
 				>
@@ -55,11 +55,11 @@ export const Text = ({
 			)}
 			{type.tag === 'h4' && (
 				<H4
+					id={id}
 					align={align}
-					pb={pb}
-					pt={pt}
-					mpb={mpb}
-					mpt={mpt}
+					ma={ma}
+					p={p}
+					mp={mp}
 					weight={weight}
 					color={color}
 				>
@@ -68,11 +68,11 @@ export const Text = ({
 			)}
 			{type.tag === 'h5' && (
 				<H5
+					id={id}
 					align={align}
-					pb={pb}
-					pt={pt}
-					mpb={mpb}
-					mpt={mpt}
+					ma={ma}
+					p={p}
+					mp={mp}
 					weight={weight}
 					color={color}
 				>
@@ -81,11 +81,11 @@ export const Text = ({
 			)}
 			{type.tag === 'p' && (
 				<P
+					id={id}
 					align={align}
-					pb={pb}
-					pt={pt}
-					mpb={mpb}
-					mpt={mpt}
+					ma={ma}
+					p={p}
+					mp={mp}
 					weight={weight}
 					color={color}
 				>
@@ -94,11 +94,11 @@ export const Text = ({
 			)}
 			{type.tag === 'small' && (
 				<Small
+					id={id}
 					align={align}
-					pb={pb}
-					pt={pt}
-					mpb={mpb}
-					mpt={mpt}
+					ma={ma}
+					p={p}
+					mp={mp}
 					weight={weight}
 					color={color}
 				>

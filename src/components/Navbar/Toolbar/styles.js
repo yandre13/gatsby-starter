@@ -21,15 +21,21 @@ export const Header = styled.header`
 	width: 100%;
 	/* background */
 	transition: 0.4s ease-in;
-	background: ${props =>
+ background: ${props =>
 		props.theme.isDark ? '#262626' : light.backgroundColor};
- ${props =>
-		props.transparent > props.innerMiddleHeight &&
-		css`
-			background: ${props => (props.theme.isDark ? 'transparent' : 'transparent')};
-			backdrop-filter: saturate(180%) blur(25px);
-			border: 0;
-		`}
+ @supports (backdrop-filter: saturate(180%) blur(25px)) {
+  & {
+   ${props =>
+				props.transparent > props.innerMiddleHeight &&
+				css`
+					background: ${props =>
+						props.theme.isDark ? 'transparent' : 'transparent'};
+					backdrop-filter: saturate(180%) blur(25px);
+					border: 0;
+				`}
+  }
+}
+ 
 
 /* 	${props =>
 	props.transparent > props.innerHeight &&

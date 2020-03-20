@@ -49,11 +49,11 @@ const ButtonContainer = styled.div`
 
 const Slide = styled.article`
 	border-radius: 20px;
-	background: white;
+	background: ${props => (props.theme.isDark ? '#302734' : '#fff')};
 	padding: 40px 20px;
 	width: 50%;
 	overflow: hidden;
-	box-shadow: 0 4px 4px -1px #545454;
+	box-shadow: 0 3px 4px -1px ${props => (props.theme.isDark ? '#171717' : '#444')};
 	@media screen and (min-width: 600px) {
 		padding: 40px 30px;
 	}
@@ -80,6 +80,7 @@ export const Slider = () => {
 			el: '.swiper-pagination',
 			clickable: true
 		},
+		lazyLoading: true,
 		breakpoints: {
 			1400: {
 				slidesPerView: 2,
@@ -118,31 +119,29 @@ export const Slider = () => {
 	}
 	return (
 		<>
-			<SquareTwo>
+			<SquareTwo id="testimonials">
 				<Text
 					type={{ tag: 'h4' }}
-					pb={60}
-					pt={50}
-					mpb={40}
-					mpt={25}
+					mp={'25px 0 40px'}
+					p={'50px 0 50px'}
 					color={'white'}
 				>
 					Testimonials
 				</Text>
-				<Swiper speed={1000} getSwiper={setSwiper} {...params}>
+				<Swiper getSwiper={setSwiper} {...params}>
 					<Slide>
 						<CustomRow>
-							<CustomCol nspan={3}>
+							<CustomCol nspan={4}>
 								<Avatar />
 							</CustomCol>
-							<CustomCol nspan={9} pl={30} mpl={0}>
-								<Text type={{ tag: 'h5' }} pt={20} mpt={30}>
+							<CustomCol nspan={8} mp={'0'} p={'0 0 0 30px'}>
+								<Text type={{ tag: 'h5' }} mp={'30px 0 0 0'} p={'20px 0 0 0'}>
 									Jhon Fag
 								</Text>
 								<Text type={{ tag: 'small' }} color={'#9C69E2'}>
 									wordfaang.com
 								</Text>
-								<Text type={{ tag: 'p' }} pt={15} mpt={20}>
+								<Text type={{ tag: 'p' }} mp={'20px 0 0 0'} p={'15px 0 0 0'}>
 									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim
 									erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet
 									nulla.
@@ -152,17 +151,17 @@ export const Slider = () => {
 					</Slide>
 					<Slide>
 						<CustomRow>
-							<CustomCol nspan={3}>
+							<CustomCol nspan={4}>
 								<Avatar />
 							</CustomCol>
-							<CustomCol nspan={9} pl={30} mpl={0}>
-								<Text type={{ tag: 'h5' }} pt={20} mpt={30}>
+							<CustomCol nspan={8} mp={'0'} p={'0 0 0 30px'}>
+								<Text type={{ tag: 'h5' }} mp={'30px 0 0 0'} p={'20px 0 0 0'}>
 									Jhon Fag
 								</Text>
 								<Text type={{ tag: 'small' }} color={'#9C69E2'}>
 									wordfaang.com
 								</Text>
-								<Text type={{ tag: 'p' }} pt={15} mpt={20}>
+								<Text type={{ tag: 'p' }} mp={'20px 0 0 0'} p={'15px 0 0 0'}>
 									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim
 									erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet
 									nulla.
@@ -172,17 +171,17 @@ export const Slider = () => {
 					</Slide>
 					<Slide>
 						<CustomRow>
-							<CustomCol nspan={3}>
+							<CustomCol nspan={4}>
 								<Avatar />
 							</CustomCol>
-							<CustomCol nspan={9} pl={30} mpl={0}>
-								<Text type={{ tag: 'h5' }} pt={20} mpt={30}>
+							<CustomCol nspan={8} mp={'0'} p={'0 0 0 30px'}>
+								<Text type={{ tag: 'h5' }} mp={'30px 0 0 0'} p={'20px 0 0 0'}>
 									Jhon Fag
 								</Text>
 								<Text type={{ tag: 'small' }} color={'#9C69E2'}>
 									wordfaang.com
 								</Text>
-								<Text type={{ tag: 'p' }} pt={15} mpt={20}>
+								<Text type={{ tag: 'p' }} mp={'20px 0 0 0'} p={'15px 0 0 0'}>
 									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim
 									erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet
 									nulla.
@@ -192,17 +191,17 @@ export const Slider = () => {
 					</Slide>
 					<Slide>
 						<CustomRow>
-							<CustomCol nspan={3}>
+							<CustomCol nspan={4}>
 								<Avatar />
 							</CustomCol>
-							<CustomCol nspan={9} pl={30} mpl={0}>
-								<Text type={{ tag: 'h5' }} pt={20} mpt={30}>
+							<CustomCol nspan={8} mp={'0'} p={'0 0 0 30px'}>
+								<Text type={{ tag: 'h5' }} mp={'30px 0 0 0'} p={'20px 0 0 0'}>
 									Jhon Fag
 								</Text>
 								<Text type={{ tag: 'small' }} color={'#9C69E2'}>
 									wordfaang.com
 								</Text>
-								<Text type={{ tag: 'p' }} pt={15} mpt={20}>
+								<Text type={{ tag: 'p' }} mp={'20px 0 0 0'} p={'15px 0 0 0'}>
 									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim
 									erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet
 									nulla.
@@ -212,17 +211,17 @@ export const Slider = () => {
 					</Slide>
 					<Slide>
 						<CustomRow>
-							<CustomCol nspan={3}>
+							<CustomCol nspan={4}>
 								<Avatar />
 							</CustomCol>
-							<CustomCol nspan={9} pl={30} mpl={0}>
-								<Text type={{ tag: 'h5' }} pt={20} mpt={30}>
+							<CustomCol nspan={8} mp={'0'} p={'0 0 0 30px'}>
+								<Text type={{ tag: 'h5' }} mp={'30px 0 0 0'} p={'20px 0 0 0'}>
 									Jhon Fag
 								</Text>
 								<Text type={{ tag: 'small' }} color={'#9C69E2'}>
 									wordfaang.com
 								</Text>
-								<Text type={{ tag: 'p' }} pt={15} mpt={20}>
+								<Text type={{ tag: 'p' }} mp={'20px 0 0 0'} p={'15px 0 0 0'}>
 									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim
 									erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet
 									nulla.

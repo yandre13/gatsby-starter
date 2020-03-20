@@ -30,9 +30,9 @@ body{
 export const dark = {
 	backgroundColor: '#333',
 	primaryColor: '#f2f2f2',
-	secondaryColor: '#F063B8',
-	fontColor: '#4B5D68',
-	buttonColor: '#9C69E2'
+	secondaryColor: '#CB589D',
+	fontColor: '#b5c2c9',
+	buttonColor: '#5E4B78'
 }
 
 export const light = {

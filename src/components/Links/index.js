@@ -4,16 +4,16 @@ import { StyledLink as Link, StyledList } from './styles'
 export const Links = () => (
 	<StyledList>
 		<li>
-			<Link to="/about-us">About us</Link>
+			<Link to="/#home">Home</Link>
 		</li>
 		<li>
-			<Link to="/page-2">About us</Link>
+			<Link to="/#whoweare">Who we are</Link>
 		</li>
 		<li>
-			<Link to="/about-us">About us</Link>
+			<Link to="/#features">Features</Link>
 		</li>
 		<li>
-			<Link to="/page-2">About us</Link>
+			<Link to="/#testimonials">Testimonials</Link>
 		</li>
 	</StyledList>
 )

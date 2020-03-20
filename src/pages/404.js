@@ -24,7 +24,11 @@ export default () => {
 			/>
 			<GlobalStyle />
 			<Error>
-				<BackImage ref={refBack} onMouseMove={handleMovement}></BackImage>
+				<BackImage
+					ref={refBack}
+					onTouchMove={handleMovement}
+					onMouseMove={handleMovement}
+				></BackImage>
 				<NotFound>
 					Page not found <br /> 404 :c <br />
 					<GoHome to="/">Back home c:</GoHome>
@@ -42,16 +46,16 @@ const NotFound = styled.h1`
 	line-height: 70px;
 	color: black;
 	margin: auto;
-	padding-top: 60%;
 	width: fit-content;
+	position: relative;
+	top: 33vh;
 	@media screen and (min-width: 768px) {
 		color: white;
 		font-size: 130px;
 		line-height: 130px;
-		padding-top: 20%;
 	}
 	@media screen and (min-width: 1440px) {
-		padding-top: 10%;
+		top: 25vh;
 	}
 `
 const GoHome = styled(Link)`

@@ -4,7 +4,7 @@ import { Text } from '../components/Text'
 import { ImageBanner, Img2, SquareOne, SubContent } from '../styles'
 
 export default ({ data }) => (
-	<SquareOne>
+	<SquareOne id="whoweare">
 		<CustomRow gutter={30}>
 			<CustomCol nspan={6}>
 				<Img2>
@@ -13,7 +13,7 @@ export default ({ data }) => (
 			</CustomCol>
 			<CustomCol nspan={6}>
 				<SubContent>
-					<Text type={{ tag: 'h4' }} weight="bold" pb={20} mpt={20} mpb={20}>
+					<Text type={{ tag: 'h4' }} weight="bold" mp={'20px 0'} p={'0 0 20px 0'}>
 						We are a high-level data storage bank
 					</Text>
 					<Text type={{ tag: 'p' }}>

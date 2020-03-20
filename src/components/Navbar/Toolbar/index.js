@@ -37,6 +37,7 @@ export const Toolbar = ({
 
 	return (
 		<Header
+			id="home"
 			transparent={transparent}
 			innerHeight={innerHeight}
 			innerMiddleHeight={innerMiddleHeight}
