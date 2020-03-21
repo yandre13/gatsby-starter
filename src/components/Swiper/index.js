@@ -178,10 +178,10 @@ export const Slider = () => {
 						</Slide>
 					</Swiper>
 					<ButtonContainer>
-						<ButtonArrow onClick={goPrev}>
+						<ButtonArrow aria-label="previous" onClick={goPrev}>
 							<StyledArrowButtonReverse />
 						</ButtonArrow>
-						<ButtonArrow onClick={goNext}>
+						<ButtonArrow aria-label="next" onClick={goNext}>
 							<StyledArrowButton />
 						</ButtonArrow>
 					</ButtonContainer>
