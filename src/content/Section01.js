@@ -16,13 +16,16 @@ export default ({ data }) => (
 				your data here safely but not be afraid <br />
 				of being stolen by others.
 			</Text>
-			<Button mm={'auto'} m={'0'} to="/page-2">
+			<Button mm={'auto'} m={'0'} to="#">
 				Learn more
 			</Button>
 		</CustomCol>
 		<CustomCol nspan="6">
 			<BannerContainer>
-				<ImageBanner fluid={data.banner.childImageSharp.fluid} />
+				<ImageBanner
+					fluid={data.banner.childImageSharp.fluid}
+					alt="Zero waste for a better world"
+				/>
 			</BannerContainer>
 		</CustomCol>
 	</CustomRow>

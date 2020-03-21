@@ -8,7 +8,7 @@ export default ({ data }) => (
 		<CustomRow gutter={30}>
 			<CustomCol nspan={6}>
 				<Img2>
-					<ImageBanner fluid={data.img2.childImageSharp.fluid} />
+					<ImageBanner fluid={data.img2.childImageSharp.fluid} alt="Who we are" />
 				</Img2>
 			</CustomCol>
 			<CustomCol nspan={6}>

@@ -5,6 +5,8 @@ import { useSiteMetadata } from '../../hooks/useSiteMetadata'
 import { GlobalStyle } from '../../styles/config'
 import { Container } from '../Container/styles.js'
 import { StyledMain } from './styles'
+import { Footer } from '../Footer'
+import { Separator } from '../../styles'
 
 if (typeof window !== 'undefined') {
 	// eslint-disable-next-line global-require
@@ -36,6 +38,8 @@ export const Layout = ({ children }) => {
 			<StyledMain>
 				<Container>{children}</Container>
 			</StyledMain>
+			<Separator mt={100} mb={100} mmt={40} mmb={50} />
+			<Footer />
 		</>
 	)
 }

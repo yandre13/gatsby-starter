@@ -23,7 +23,10 @@ export default ({ data }) => (
 			<CardContainer>
 				<Card bg={{ light: '#F0FAF8', dark: '#283230' }}>
 					<ContainerImgContent mp={'30px 0 0 0'} p={'40px 0 0 0'}>
-						<ImageBanner fluid={data.img_c01.childImageSharp.fluid} />
+						<ImageBanner
+							fluid={data.img_c01.childImageSharp.fluid}
+							alt="no more pollution"
+						/>
 					</ContainerImgContent>
 					<ContainerContent p={'40px 40px 20px 20px'}>
 						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>
@@ -45,7 +48,10 @@ export default ({ data }) => (
 			<CardContainer>
 				<Card bg={{ light: '#f5f0fc', dark: '#2B262C' }}>
 					<ContainerImgContent mp={'30px 0 0 0'} p={'40px 0 0 0'}>
-						<ImageBanner fluid={data.img_c02.childImageSharp.fluid} />
+						<ImageBanner
+							fluid={data.img_c02.childImageSharp.fluid}
+							alt="no more plastic bags"
+						/>
 					</ContainerImgContent>
 					<ContainerContent p={'40px 40px 20px 20px'}>
 						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>
@@ -67,7 +73,10 @@ export default ({ data }) => (
 			<CardContainer>
 				<Card bg={{ light: '#FDEFF8', dark: '#362830' }}>
 					<ContainerImgContent mp={'30px 0 0 0 '} p={'40px 0 0 0'}>
-						<ImageBanner fluid={data.img_c03.childImageSharp.fluid} />
+						<ImageBanner
+							fluid={data.img_c03.childImageSharp.fluid}
+							alt="You must plant trees"
+						/>
 					</ContainerImgContent>
 					<ContainerContent p={'40px 40px 20px 20px'}>
 						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>
@@ -89,7 +98,10 @@ export default ({ data }) => (
 			<CardContainer>
 				<Card bg={{ light: '#EAF5FB', dark: '#222D34' }}>
 					<ContainerImgContent mp={'30px 0 0 0 '} p={'40px 0 0 0'}>
-						<ImageBanner fluid={data.img_c04.childImageSharp.fluid} />
+						<ImageBanner
+							fluid={data.img_c04.childImageSharp.fluid}
+							alt="Join us to save the world"
+						/>
 					</ContainerImgContent>
 					<ContainerContent p={'40px 40px 20px 20px'}>
 						<Text type={{ tag: 'h4' }} mp={'20px 0 0 0'} p={'10px 0 0 0'}>

@@ -114,7 +114,7 @@ export const Small = styled.small`
 	font-weight: ${props => (props.weight ? props.weight : 'normal')};
 	text-align: ${props => props.ma && props.ma};
 	color: ${props => (props.theme.isDark ? dark.fontColor : light.fontColor)};
-	color: ${props => props.color && props.color};
+	color: ${props => (props.theme.isDark ? dark.fontColor : props.color)};
 	padding: ${props => props.mp && props.mp};
 	& br {
 		display: none;

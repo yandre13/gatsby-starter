@@ -2,7 +2,7 @@ import React from 'react'
 //
 import { Layout } from '../components/Layout'
 import { graphql } from 'gatsby'
-import { OverContainer, Separator } from '../styles'
+import { OverContainer } from '../styles'
 
 import { Slider } from '../components/Swiper'
 
@@ -10,7 +10,6 @@ import Section01 from '../content/Section01'
 import Section02 from '../content/Section02'
 import Section03 from '../content/Section03'
 import Section04 from '../content/Section04'
-import { Footer } from '../components/Footer'
 
 export default ({ data }) => {
 	return (
@@ -28,8 +27,6 @@ export default ({ data }) => {
 					{/*Section 5*/}
 					<Slider />
 				</OverContainer>
-				<Separator mt={100} mb={100} mmt={50} mmb={50} />
-				<Footer />
 			</Layout>
 		</>
 	)
