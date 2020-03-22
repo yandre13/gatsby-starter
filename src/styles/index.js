@@ -120,7 +120,7 @@ export const OverContainer = styled.div`
 export const SquareOne = styled.div`
 	width: 100%;
 	border-radius: 50px;
-	background: ${props => (props.theme.isDark ? '#402B38' : '#fde8f4')};
+	background: ${props => (props.theme.isDark ? '#291B23' : '#fde8f4')};
 	padding: 40px 30px;
 	@media screen and (min-width: 768px) {
 		padding: 40px 60px 40px 40px;

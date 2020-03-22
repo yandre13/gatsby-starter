@@ -21,7 +21,7 @@ export default ({ data }) => (
 	<CustomRow mp={'20px 0 50px 0'} p={'60px 0 110px'} gutter={50}>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={{ light: '#F0FAF8', dark: '#283230' }}>
+				<Card bg={{ light: '#F0FAF8', dark: '#181E1D' }}>
 					<ContainerImgContent mp={'30px 0 0 0'} p={'40px 0 0 0'}>
 						<ImageBanner
 							fluid={data.img_c01.childImageSharp.fluid}
@@ -46,7 +46,7 @@ export default ({ data }) => (
 		</CustomCol>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={{ light: '#f5f0fc', dark: '#2B262C' }}>
+				<Card bg={{ light: '#f5f0fc', dark: '#1B181C' }}>
 					<ContainerImgContent mp={'30px 0 0 0'} p={'40px 0 0 0'}>
 						<ImageBanner
 							fluid={data.img_c02.childImageSharp.fluid}
@@ -71,7 +71,7 @@ export default ({ data }) => (
 		</CustomCol>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={{ light: '#FDEFF8', dark: '#362830' }}>
+				<Card bg={{ light: '#FDEFF8', dark: '#241B20' }}>
 					<ContainerImgContent mp={'30px 0 0 0 '} p={'40px 0 0 0'}>
 						<ImageBanner
 							fluid={data.img_c03.childImageSharp.fluid}
@@ -96,7 +96,7 @@ export default ({ data }) => (
 		</CustomCol>
 		<CustomCol nspan={6}>
 			<CardContainer>
-				<Card bg={{ light: '#EAF5FB', dark: '#222D34' }}>
+				<Card bg={{ light: '#EAF5FB', dark: '#161D22' }}>
 					<ContainerImgContent mp={'30px 0 0 0 '} p={'40px 0 0 0'}>
 						<ImageBanner
 							fluid={data.img_c04.childImageSharp.fluid}

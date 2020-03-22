@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { ArrowNarrowRight } from '@styled-icons/heroicons-outline/ArrowNarrowRight'
+import { dark, light } from '../../styles/config'
 
 export const StyledArrowButton = styled(ArrowNarrowRight)`
 	color: white;
@@ -41,7 +42,8 @@ export const ButtonContainer = styled.div`
 
 export const Slide = styled.article`
 	border-radius: 20px;
-	background: ${props => (props.theme.isDark ? '#302734' : '#fff')};
+	background: ${props =>
+		props.theme.isDark ? dark.backgroundColor : light.backgroundColor};
 	padding: 40px 20px;
 	width: 50%;
 	overflow: hidden;

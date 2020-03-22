@@ -34,4 +34,8 @@ export const StyledLink = styled(Link)`
 	line-height: 24px;
 	display: block;
 	width: 100%;
+	&:hover {
+		color: ${props =>
+			props.theme.isDark ? dark.secondaryColor : light.secondaryColor};
+	}
 `

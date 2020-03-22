@@ -18,7 +18,7 @@ body{
 		props.theme.isDark ? dark.primaryColor : light.primaryColor};
   background: ${props =>
 			props.theme.isDark ? dark.backgroundColor : light.backgroundColor};
-  transition: background-color .7s ease;
+  transition: background-color .9s ease;
 
 	@media screen and (min-width: 1680px) {
 		font-size: 18px;
@@ -30,13 +30,13 @@ body{
 export const dark = {
 	backgroundColor: '#000',
 	primaryColor: '#f2f2f2',
-	secondaryColor: '#CB589D',
+	secondaryColor: '#BD4E91',
 	fontColor: '#b5c2c9',
-	buttonColor: '#5E4B78'
+	buttonColor: '#6B489C'
 }
 
 export const light = {
-	backgroundColor: '#F7FBFE',
+	backgroundColor: '#FFF',
 	primaryColor: '#212353',
 	secondaryColor: '#F063B8',
 	fontColor: '#4B5D68',
