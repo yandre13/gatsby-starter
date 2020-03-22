@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components'
+import { dark, light } from '../../../styles/config'
 
 export const NavDrawer = styled.nav`
 	height: 100%;
-	background: ${props => (props.theme.isDark ? '#000' : '#fde8f4')};
+	background: ${props =>
+		props.theme.isDark ? dark.backgroundColor : light.backgroundColor};
 	opacity: 0.9;
 	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.7);
 	position: fixed;
