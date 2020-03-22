@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Toolbar } from './Toolbar'
 import { SideDrawer } from './SideDrawer'
 import { BackDrop } from './BackDrop'
-
+//Drawer for mobile
 export const Navbar = ({ themeContext, dark, setDark }) => {
 	const [show, setShow] = useState(false),
 		[width, setWidth] = useState(0)
@@ -13,7 +13,6 @@ export const Navbar = ({ themeContext, dark, setDark }) => {
 		if (typeof window !== `undefined`) {
 			setWidth(window.innerWidth)
 		}
-
 		function watchResize() {
 			window.addEventListener('resize', () => setWidth(window.innerWidth))
 		}

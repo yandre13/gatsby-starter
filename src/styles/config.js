@@ -17,7 +17,7 @@ body{
  color: ${props =>
 		props.theme.isDark ? dark.primaryColor : light.primaryColor};
   background: ${props =>
-			props.theme.isDark ? '#262626' : light.backgroundColor};
+			props.theme.isDark ? dark.backgroundColor : light.backgroundColor};
   transition: background-color .7s ease;
 
 	@media screen and (min-width: 1680px) {
@@ -28,7 +28,7 @@ body{
 `
 
 export const dark = {
-	backgroundColor: '#333',
+	backgroundColor: '#000',
 	primaryColor: '#f2f2f2',
 	secondaryColor: '#CB589D',
 	fontColor: '#b5c2c9',
@@ -36,7 +36,7 @@ export const dark = {
 }
 
 export const light = {
-	backgroundColor: '#FCFDFE',
+	backgroundColor: '#F7FBFE',
 	primaryColor: '#212353',
 	secondaryColor: '#F063B8',
 	fontColor: '#4B5D68',

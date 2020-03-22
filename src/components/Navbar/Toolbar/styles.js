@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Toggle } from 'react-toggle-component'
-import { light } from '../../../styles/config'
+import { light, dark } from '../../../styles/config'
 
 export const ContainerButton = styled.div`
 	display: flex;
@@ -22,7 +22,7 @@ export const Header = styled.header`
 	/* background */
 	transition: 0.4s ease-in;
  background: ${props =>
-		props.theme.isDark ? '#262626' : light.backgroundColor};
+		props.theme.isDark ? dark.backgroundColor : light.backgroundColor};
  @supports (backdrop-filter: saturate(180%) blur(25px)) {
   & {
    ${props =>
