@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const NavDrawer = styled.nav`
 	height: 100%;
-	background: ${props => (props.theme.isDark ? '#2d2d2d' : '#fde8f4')};
+	background: ${props => (props.theme.isDark ? '#000' : '#fde8f4')};
 	opacity: 0.9;
 	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.7);
 	position: fixed;
